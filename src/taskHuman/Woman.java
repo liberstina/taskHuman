@@ -6,30 +6,50 @@ package taskHuman;
 public class Woman {
     private int age;
     private String name;
-    private int weight;
+    private static int handsQty;
+    private static int legsQty;
     private String favouriteBrand;
     private int amountLipstick;
     private boolean gaveBirth;
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
-    public void setAge(int age){
+
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getWeight(){
-        return weight;
+    public static int getHandsQty() {
+        return handsQty;
     }
-    public void setWeight(int weight){
-        this.weight = weight;
+
+    public static void setHandsQty(int handsQty) {
+        Woman.handsQty = handsQty;
+    }
+
+    public static int getLegsQty() {
+        return legsQty;
+    }
+
+    public static void setLegsQty(int legsQty) {
+        Woman.legsQty = legsQty;
+    }
+
+    public boolean isGaveBirth() {
+        return gaveBirth;
+    }
+
+    public void setGaveBirth(boolean gaveBirth) {
+        this.gaveBirth = gaveBirth;
     }
 
     public String getFavouriteBrand(){
@@ -46,39 +66,35 @@ public class Woman {
         this.amountLipstick = amountLipstick;
     }
 
-    public void eat(){
-
+    public static void eat(){
+        System.out.println("I am eating. Yammy-yammy!");
     }
 
-    public void sleep(){
-
+    public static void sleep(){
+        System.out.println("I am sleeping. Zzzzzzz");
     }
 
     public void makingUp(){
-
+        System.out.println("I become beautiful and young!");
     }
 
     public void epilateLegs(){
-
+        System.out.println("My legs become smoothy");
     }
 
-    public Woman (String name, int age, int amountLipstick){
-        this.name = name;
+    public Woman (int age, String name, String favouriteBrand, int amountLipstick , boolean gaveBirth){
         this.age = age;
-        this.amountLipstick = amountLipstick;
-        sleep();
-        makingUp();
-        epilateLegs();
-    }
-
-    public Woman (String name, int weight, String favouriteBrand, boolean gaveBirth){
         this.name = name;
-        this.weight = weight;
         this.favouriteBrand = favouriteBrand;
         this.gaveBirth = gaveBirth;
-        eat();
-        sleep();
-        makingUp();
+        this.amountLipstick = amountLipstick;
+    }
+
+    public Woman (int age, String name, String favouriteBrand, boolean gaveBirth){
+        this.age = age;
+        this.name = name;
+        this.favouriteBrand = favouriteBrand;
+        this.gaveBirth = gaveBirth;
     }
 
 }
